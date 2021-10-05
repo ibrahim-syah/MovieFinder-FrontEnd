@@ -1,6 +1,6 @@
 class DataSource {
    static searchMovie(keyword) {
-       return fetch(`https://itunes.apple.com/search?term=${keyword}&media=movie&entity=movie`)
+       return fetch(`https://itunes.apple.com/search?term=${keyword}&media=movie&entity=movie&limit=20`)
        .then(response => {
            return response.json();
        })

@@ -8,7 +8,8 @@ const main = () => {
 
     const onButtonSearchClicked = async () => {
         try{
-            const result = await DataSource.searchMovie(searchElement.value);
+			const searchQuery = searchElement.value.split(" ").join("+");
+            const result = await DataSource.searchMovie(searchQuery);
             renderResult(result);
         } catch (message) {
             fallbackResult(message)

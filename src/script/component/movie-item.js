@@ -54,7 +54,7 @@ class MovieItem extends HTMLElement {
            <img class="artwork-movie" src="${this._movie.artworkUrl100}" alt="Artwork">
            <div class="movie-info">
                <h2>${this._movie.trackName}</h2>
-               <p>${this._movie.shortDescription}</p>
+               <p>${this._movie.longDescription}</p>
            </div>`;
     }
 }
