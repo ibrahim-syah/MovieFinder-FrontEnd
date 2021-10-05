@@ -1,12 +1,12 @@
-class ClubItem extends HTMLElement {
+class MovieItem extends HTMLElement {
 
     constructor() {
         super();
         this.shadowDOM = this.attachShadow({mode: "open"});
     }
 
-    set club(club) {
-        this._club = club;
+    set movie(movie) {
+        this._movie = movie;
         this.render();
     }
 
@@ -26,22 +26,22 @@ class ClubItem extends HTMLElement {
                    overflow: hidden;
                }
               
-               .fan-art-club {
+               .artwork-movie {
                    width: 100%;
                    max-height: 300px;
                    object-fit: cover;
                    object-position: center;
                }
               
-               .club-info {
+               .movie-info {
                    padding: 24px;
                }
               
-               .club-info > h2 {
+               .movie-info > h2 {
                    font-weight: lighter;
                }
               
-               .club-info > p {
+               .movie-info > p {
                    margin-top: 10px;
                    overflow: hidden;
                    text-overflow: ellipsis;
@@ -51,12 +51,12 @@ class ClubItem extends HTMLElement {
                }
 
            </style>
-           <img class="fan-art-club" src="${this._club.artworkUrl100}" alt="Fan Art">
-           <div class="club-info">
-               <h2>${this._club.trackName}</h2>
-               <p>${this._club.shortDescription}</p>
+           <img class="artwork-movie" src="${this._movie.artworkUrl100}" alt="Artwork">
+           <div class="movie-info">
+               <h2>${this._movie.trackName}</h2>
+               <p>${this._movie.shortDescription}</p>
            </div>`;
     }
 }
 
-customElements.define("club-item", ClubItem);
+customElements.define("movie-item", MovieItem);
