@@ -8,7 +8,7 @@ const main = () => {
 
     const onButtonSearchClicked = async () => {
         try{
-            const result = await DataSource.searchClub(searchElement.value);
+            const result = await DataSource.searchMovie(searchElement.value);
             renderResult(result);
         } catch (message) {
             fallbackResult(message)

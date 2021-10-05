@@ -51,10 +51,10 @@ class ClubItem extends HTMLElement {
                }
 
            </style>
-           <img class="fan-art-club" src="${this._club.strTeamBadge}" alt="Fan Art">
+           <img class="fan-art-club" src="${this._club.artworkUrl100}" alt="Fan Art">
            <div class="club-info">
-               <h2>${this._club.strTeam}</h2>
-               <p>${this._club.strDescriptionEN}</p>
+               <h2>${this._club.trackName}</h2>
+               <p>${this._club.shortDescription}</p>
            </div>`;
     }
 }
